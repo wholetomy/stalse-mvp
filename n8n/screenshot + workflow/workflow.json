@@ -1,0 +1,59 @@
+{
+  "name": "Webhook + HTTP Request",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "incoming",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "c7dc73f1-d400-4985-8a1f-ba4aff2970ca",
+      "name": "Webhook",
+      "webhookId": "eaf3271e-fd86-4ff1-8e93-bef1aea0625c"
+    },
+    {
+      "parameters": {
+        "url": "https://httpbin.org/uuid",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        208,
+        0
+      ],
+      "id": "09e488c3-1b62-42ef-b302-50afd37055b2",
+      "name": "HTTP Request"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "36c8ebff-c441-431c-82ce-dd09364e8ece",
+  "meta": {
+    "instanceId": "ed35dabc08d682ed57895624b6fc96a87b2d2f0dd465fde2d3ee6ad69519ec03"
+  },
+  "id": "BxH503HL3xeAHHTO",
+  "tags": []
+}
